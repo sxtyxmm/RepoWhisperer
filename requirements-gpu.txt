@@ -1,0 +1,5 @@
+# GPU/Quantization dependencies - install only if CUDA is available
+# Run: pip install -r requirements-gpu.txt
+
+bitsandbytes>=0.41.0
+auto-gptq>=0.7.0

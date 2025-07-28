@@ -1,0 +1,81 @@
+model:
+  name: "deepseek-ai/deepseek-coder-33b-instruct"
+  device: "auto"
+  quantization: "4bit"  # Options: none, 4bit, 8bit
+  max_tokens: 4096
+  temperature: 0.1
+  top_p: 0.95
+
+parsing:
+  exclude_dirs:
+    - ".git"
+    - "__pycache__"
+    - ".pytest_cache"
+    - "node_modules"
+    - "venv"
+    - "env"
+    - ".venv"
+    - "dist"
+    - "build"
+    - ".next"
+    - ".nuxt"
+  
+  exclude_files:
+    - "*.pyc"
+    - "*.pyo"
+    - "*.pyd"
+    - "*.so"
+    - "*.egg"
+    - "*.log"
+    - ".DS_Store"
+    - "Thumbs.db"
+    - "*.min.js"
+    - "*.min.css"
+  
+  supported_extensions:
+    - ".py"
+    - ".js"
+    - ".ts"
+    - ".jsx"
+    - ".tsx"
+    - ".java"
+    - ".cpp"
+    - ".c"
+    - ".h"
+    - ".hpp"
+    - ".cs"
+    - ".go"
+    - ".rs"
+    - ".php"
+    - ".rb"
+    - ".swift"
+    - ".kt"
+    - ".scala"
+    - ".r"
+    - ".m"
+    - ".sh"
+    - ".sql"
+    - ".md"
+    - ".txt"
+    - ".yml"
+    - ".yaml"
+    - ".json"
+    - ".xml"
+    - ".html"
+    - ".css"
+
+prompts:
+  max_chunk_size: 3000  # Maximum tokens per code chunk
+  context_lines: 5      # Lines of context around functions/classes
+  
+readme:
+  template_sections:
+    - "title"
+    - "introduction" 
+    - "installation"
+    - "architecture"
+    - "file_breakdown"
+    - "key_components"
+    - "usage"
+    - "contributing"
+    - "license"
